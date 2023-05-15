@@ -1,0 +1,17 @@
+.card {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-color: #FF6060;
+}
+
+.cardTitle{
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0 20px 20px 20px;
+    color: white;
+}

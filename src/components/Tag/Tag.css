@@ -1,0 +1,15 @@
+.tag {
+    display: flex;
+}
+
+.tag-span{
+    background-color: #FF6060;
+    border-radius: 10px;
+    color: white;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 2px 22px;
+    width: auto;
+}
