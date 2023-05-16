@@ -1,5 +1,6 @@
 .tag {
     display: flex;
+    margin: 20px 10px 0 0;
 }
 
 .tag-span{
