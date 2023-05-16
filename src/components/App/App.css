@@ -1,11 +1,12 @@
-.main{
-    margin: 0 100px;
+.main {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
 }
 
-.componentDesc{
+.componentDesc {
     font-size: 24px;
     font-weight: 500;
     font-style: normal;

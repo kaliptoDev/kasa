@@ -1,6 +1,8 @@
 header {
-    margin: 40px 0;
+    margin: 40px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1240px;
 }
