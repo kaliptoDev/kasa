@@ -4,7 +4,7 @@ const Card = ({ id, image, title}) => {
     console.log(id)
     return (
         <div className='card__container'>
-            <a href={`/${id}`} className='card__link'>
+            <a href={`/fiche-logement/${id}`} className='card__link'>
             <div className='card__image_container'>
                 <div className="card" style={image ? { backgroundImage: "url(" + image + ")", backgroundPosition: "center center", backgroundSize: "cover" } : null}>
                 </div>
