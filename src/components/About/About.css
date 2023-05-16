@@ -1,0 +1,31 @@
+.about {
+    width: 100%;
+    max-width: 1240px;
+}
+
+.about__image__container {
+    background-color: black;
+    border-radius: 25px;
+}
+
+.about__image {
+    background-image: url(../../assets/Images/about.png);
+    height: 223px;
+    width: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+.about__dropdown{
+    margin: 15px 0;
+}
