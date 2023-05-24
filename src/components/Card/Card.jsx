@@ -1,7 +1,6 @@
 import './Card.css'
 
 const Card = ({ id, image, title}) => {
-    console.log(id)
     return (
         <div className='card__container'>
             <a href={`/fiche-logement/${id}`} className='card__link'>
