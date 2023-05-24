@@ -1,6 +1,6 @@
 import './App.css';
 import Header from '../Header/Header';
-import RoutesTree from '../RoutesTree/RoutesTree';
+import RoutesTree from '../../router/RoutesTree/RoutesTree';
 import Footer from '../Footer/Footer';
 
 
