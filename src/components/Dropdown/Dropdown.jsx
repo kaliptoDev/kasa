@@ -5,11 +5,11 @@ import { useState } from "react";
 
 const Dropdown = ({ text, list, size, position }) => {
 
-    const [clicked, setClicked] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     // const hidden = { display: clicked ? "block" : "none" };
-    const hidden = clicked ? {maxHeight: "400px"} : { maxHeight: "0", padding: "0 20px", overflow: "hidden"};
-    const rotate = { transform: clicked ? "rotate(0deg)" : "rotate(180deg)" };
+    const hidden = isOpen ? {maxHeight: "400px"} : { maxHeight: "0", padding: "0 20px", overflow: "hidden"};
+    const rotate = { transform: isOpen ? "rotate(0deg)" : "rotate(180deg)" };
 
     let customStyling = null;
 
@@ -26,7 +26,7 @@ const Dropdown = ({ text, list, size, position }) => {
     }
 
     const handleClick = () => {
-        setClicked(!clicked)
+        setIsOpen(!isOpen)
     }
     //style={styling}
     return (
