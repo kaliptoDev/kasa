@@ -1,0 +1,32 @@
+.ficheLogement__title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    color: #FF6060;
+    margin: 30px 0 0 0;
+}
+
+.ficheLogement__location {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #FF6060;
+    margin: 0;
+}
+
+.ficheLogement__container__tags{
+    display: flex;
+}
+
+.ficheLogement__infos{
+    display: flex;
+    margin: 24px 0 14px 0;
+    justify-content: space-between;
+}
+
+.ficheLogement__container{
+    display: flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

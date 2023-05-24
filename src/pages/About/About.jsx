@@ -1,7 +1,12 @@
 import './About.css'
-import Dropdown from '../Dropdown/Dropdown'
+import Dropdown from '../../components/Dropdown/Dropdown'
+import { useEffect } from 'react'
 
 const About = () => {
+
+    useEffect(() => {
+        document.title = 'Kasa - A Propos'
+    }, [])
 
     const firstTitle = "Fiabilité"
     const secondTitle = "Respect"
