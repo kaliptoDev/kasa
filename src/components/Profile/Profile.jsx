@@ -6,9 +6,9 @@ const Profile = ({ host, image }) => {
         <div className='profile'>
             <div className='profile__container'>
                 <div className='profile__container__name'>
-                    <h1 className='profile__container__h1'>{host.name}</h1>
+                    <h1 className='profile__container__h1'>{host ? host.name : null}</h1>
                 </div>
-                <div className='profile__container__image' style={{ backgroundImage: `url(${host.picture})` }} />
+                <div className='profile__container__image' style={host?{ backgroundImage: `url(${host.picture})` }:null} />
             </div>
         </div>
     )
