@@ -9,15 +9,15 @@ const Home = () => {
     const [data, setData] = useState(null);
 
     const res = useContext(DataContext)
-    
-    useEffect(() => {
-        document.title = 'Kasa - Accueil'
-    }, [])
-
+   
     useEffect(() => {
         setData(res)
     }, [res])
-
+    
+   
+    useEffect(() => {
+        document.title = 'Kasa - Accueil'
+    }, [])
 
     return (
 
