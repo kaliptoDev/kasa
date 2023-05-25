@@ -7,7 +7,7 @@ import Tag from '../../components/Tag/Tag.jsx'
 import Dropdown from '../../components/Dropdown/Dropdown';
 import Profile from '../../components/Profile/Profile';
 import Rating from '../../components/Rating/Rating';
-
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 
 const FicheLogement = () => {
@@ -25,39 +25,39 @@ const FicheLogement = () => {
     }, [fiche])
 
     return (
-
-        <div className='ficheLogement'>
-            <div className='ficheLogement__Carousel'>
-                <Carousel images={fiche ? fiche.pictures : null} />
-            </div>
-
-            <div className='ficheLogement__container'>
-                <div className='ficheLogement__container__description'>
-                    <h1 className='ficheLogement__title'>{fiche ? fiche.title : null}</h1>
-                    <h2 className='ficheLogement__location'>{fiche ? fiche.location : null}</h2>
-                    <div className='ficheLogement__container__tags'>
-                        {fiche ? fiche.tags.map((tag, index) => (
-                            <Tag key={index} text={tag} />
-                        )) : null}
-                    </div>
-                </div>
-                <div className='ficheLogement__container__secondary'>
-                    <div className='ficheLogement__container__profile'>
-                        <Profile host={fiche ? fiche.host : null} />
-                    </div>
-                    <div className='ficheLogement__container__rating'>
-                        <Rating rating={fiche ? fiche.rating : null} />
-                    </div>
+        fiche === null ? <ErrorPage /> :
+            <div className='ficheLogement'>
+                <div className='ficheLogement__Carousel'>
+                    <Carousel images={fiche ? fiche.pictures : null} />
                 </div>
 
-            </div>
+                <div className='ficheLogement__container'>
+                    <div className='ficheLogement__container__description'>
+                        <h1 className='ficheLogement__title'>{fiche ? fiche.title : null}</h1>
+                        <h2 className='ficheLogement__location'>{fiche ? fiche.location : null}</h2>
+                        <div className='ficheLogement__container__tags'>
+                            {fiche ? fiche.tags.map((tag, index) => (
+                                <Tag key={index} text={tag} />
+                            )) : null}
+                        </div>
+                    </div>
+                    <div className='ficheLogement__container__secondary'>
+                        <div className='ficheLogement__container__profile'>
+                            <Profile host={fiche ? fiche.host : null} />
+                        </div>
+                        <div className='ficheLogement__container__rating'>
+                            <Rating rating={fiche ? fiche.rating : null} />
+                        </div>
+                    </div>
 
-            <div className='ficheLogement__infos'>
-                <Dropdown text='Description' list={fiche ? fiche.description : null} />
-                <Dropdown text='Equipements' list={fiche ? fiche.equipments : null} />
-            </div>
+                </div>
 
-        </div>
+                <div className='ficheLogement__infos'>
+                    <Dropdown text='Description' list={fiche ? fiche.description : null} />
+                    <Dropdown text='Equipements' list={fiche ? fiche.equipments : null} />
+                </div>
+
+            </div>
     )
 
 
