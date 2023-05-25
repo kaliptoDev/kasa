@@ -18,7 +18,7 @@ const FicheLogement = () => {
     const data = useContext(DataContext)
     useEffect(() => {
         setFiche(data ? data.filter((ficheLogement) => ficheLogement.id === id)[0] : null)
-    }, [data])
+    }, [data,id])
 
     useEffect(() => {
         document.title = fiche ? `Kasa - ${fiche.title}` : 'Kasa - Fiche logement'
