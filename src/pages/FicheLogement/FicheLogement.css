@@ -1,3 +1,7 @@
+.ficheLogement{
+    max-width: 100%;
+}
+
 .ficheLogement__title {
     font-size: 36px;
     font-weight: 500;
