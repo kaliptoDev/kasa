@@ -1,7 +1,7 @@
 import './FicheLogement.css'
-import data from '../../assets/Data/data.json'
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { DataContext } from '../../Context/DataContext'
 import Carousel from '../../components/Carousel/Carousel.jsx'
 import Tag from '../../components/Tag/Tag.jsx'
 import Dropdown from '../../components/Dropdown/Dropdown';
@@ -9,45 +9,48 @@ import Profile from '../../components/Profile/Profile';
 import Rating from '../../components/Rating/Rating';
 
 
+
 const FicheLogement = () => {
-    const {id} = useParams();
+    const { id } = useParams();
 
-    // pas bô !
-    const fiche = data.filter((ficheLogement) => ficheLogement.id === id)
+    const [fiche, setFiche] = useState(null);
 
-        document.title = `Kasa - ${fiche[0].title}`
+    const data = useContext(DataContext)
+    useEffect(() => {
+        setFiche(data ? data.filter((ficheLogement) => ficheLogement.id === id)[0] : null)
+    }, [data])
 
     return (
 
         <div className='ficheLogement'>
             <div className='ficheLogement__Carousel'>
-                <Carousel images={fiche[0].pictures} />
+                <Carousel images={fiche ? fiche.pictures : null} />
             </div>
 
             <div className='ficheLogement__container'>
                 <div className='ficheLogement__container__description'>
-                    <h1 className='ficheLogement__title'>{fiche[0].title}</h1>
-                    <h2 className='ficheLogement__location'>{fiche[0].location}</h2>
+                    <h1 className='ficheLogement__title'>{fiche ? fiche.title : null}</h1>
+                    <h2 className='ficheLogement__location'>{fiche ? fiche.location : null}</h2>
                     <div className='ficheLogement__container__tags'>
-                        {fiche[0].tags.map((tag, index) => (
+                        {fiche ? fiche.tags.map((tag, index) => (
                             <Tag key={index} text={tag} />
-                        ))}
+                        )) : null}
                     </div>
                 </div>
                 <div className='ficheLogement__container__secondary'>
                     <div className='ficheLogement__container__profile'>
-                        <Profile host={fiche[0].host} />
+                        <Profile host={fiche ? fiche.host : null} />
                     </div>
                     <div className='ficheLogement__container__rating'>
-                        <Rating rating={fiche[0].rating} />
+                        <Rating rating={fiche ? fiche.rating : null} />
                     </div>
                 </div>
 
             </div>
 
             <div className='ficheLogement__infos'>
-                <Dropdown text='Description' list={fiche[0].description} />
-                <Dropdown text='Equipements' list={fiche[0].equipments} />
+                <Dropdown text='Description' list={fiche ? fiche.description : null} />
+                <Dropdown text='Equipements' list={fiche ? fiche.equipments : null} />
             </div>
 
         </div>
