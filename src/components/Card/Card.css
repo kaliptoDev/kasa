@@ -46,4 +46,7 @@
 
 .card__link {
     cursor: pointer;
+    height: 340px;
+    width: 340px;
+    z-index: 2;
 }
