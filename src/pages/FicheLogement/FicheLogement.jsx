@@ -20,6 +20,10 @@ const FicheLogement = () => {
         setFiche(data ? data.filter((ficheLogement) => ficheLogement.id === id)[0] : null)
     }, [data])
 
+    useEffect(() => {
+        document.title = fiche ? `Kasa - ${fiche.title}` : 'Kasa - Fiche logement'
+    }, [fiche])
+
     return (
 
         <div className='ficheLogement'>
