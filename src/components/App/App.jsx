@@ -11,8 +11,6 @@ const App = () => {
   const [data, setData] = useState(null);
   
   let res = useFetchData('./Data/data.json')
-  
-  console.log(data)
 
   useEffect(() => {
     setData(res.data)
