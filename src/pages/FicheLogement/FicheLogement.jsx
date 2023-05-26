@@ -1,7 +1,6 @@
 import './FicheLogement.css'
 import { useParams } from 'react-router-dom';
-import { useEffect, useState, useContext } from 'react';
-import { DataContext } from '../../Context/DataContext'
+import { useEffect, useState } from 'react';
 import Carousel from '../../components/Carousel/Carousel.jsx'
 import Tag from '../../components/Tag/Tag.jsx'
 import Dropdown from '../../components/Dropdown/Dropdown';
