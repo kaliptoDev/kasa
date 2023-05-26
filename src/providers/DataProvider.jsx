@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from 'react'
-import useFetchData from '../utils/useFetchData';
+
 
 // CONTEXT = definition et/ou valeurs par default
 export const DataContext = createContext({
