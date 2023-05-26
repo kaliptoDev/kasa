@@ -1,26 +1,17 @@
 import './Home.css'
 import Card from '../../components/Card/Card'
-import { useContext, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Loading from '../../components/Loading/Loading'
-import { DataContext } from '../../Context/DataContext'
+import useData from '../../hooks/useData'
 
 const Home = () => {
-    
-    const [data, setData] = useState(null);
-
-    const res = useContext(DataContext)
-   
-    useEffect(() => {
-        setData(res)
-    }, [res])
-    
+    const { data } = useData()
    
     useEffect(() => {
         document.title = 'Kasa - Accueil'
     }, [])
 
     return (
-
         <div className="home">
             <div className="home__container">
                 <div className='home__image'>
@@ -34,11 +25,8 @@ const Home = () => {
                     return <Card id={card.id} image={card.cover} title={card.title} key={index} fiche={card} />
                 }) : <Loading />
                 }
-
             </div>
-
         </div>
-
     )
 }
 
