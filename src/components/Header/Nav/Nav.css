@@ -6,3 +6,10 @@
     width: 300px;
     width: auto;
 }
+
+@media (max-width: 550px) {
+    .nav__list {
+        padding: 0;
+    }
+}
+    

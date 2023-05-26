@@ -11,3 +11,13 @@
     color: #FF6060;
     text-decoration: underline;
 }
+
+@media (max-width: 550px) {
+    .nav__link {
+        font-size: 12px;
+        line-height: 17px;
+        margin-left: 10px;
+        text-transform: uppercase;
+    }
+}
+    

@@ -29,3 +29,10 @@
     font-weight: 500;
     font-style: normal;
 }
+
+@media (max-width: 550px) {
+    .credits{
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

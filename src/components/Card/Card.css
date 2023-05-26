@@ -6,7 +6,6 @@
     flex-direction: column-reverse;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-color: #FF6060;
-    /* opacity: 0.75; */
     position: relative;
     overflow: hidden;
 }
@@ -49,4 +48,28 @@
     height: 340px;
     width: 340px;
     z-index: 2;
+}
+
+@media (max-width: 550px) {
+
+    .card__container {
+        width: 100%;
+        max-width: 550px;
+        height: 255px;
+        margin: 0 0 20px 0px;
+        box-sizing: content-box;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 550px;
+        height: 255px;
+        box-sizing: content-box;
+    }
+
+    .cardTitle{
+        
+
+    }
+
 }
