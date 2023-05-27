@@ -29,7 +29,7 @@ const Dropdown = ({ text, list, size, position }) => {
     const handleClick = () => {
         setIsOpen(!isOpen)
     }
-    //style={styling}
+
     return (
         <div className={`dropdown ${position}`} style={customStyling ? customStyling : null}>
             <div className="dropdown__title" onClick={handleClick}>
