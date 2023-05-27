@@ -4,7 +4,7 @@ import './Arrow.css'
 const Arrow = () => {
 
     return (
-            <ArrowSVG  className= {`arrowSVG arrow` }/>
+            <ArrowSVG  className= "arrow"/>
     )
 
 }
