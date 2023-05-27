@@ -8,18 +8,19 @@ const Dropdown = ({ text, list, size, position }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     // const hidden = { display: clicked ? "block" : "none" };
-    const hidden = isOpen ? {maxHeight: "400px"} : { maxHeight: "0", padding: "0 20px", overflow: "hidden"};
+    const hidden = isOpen ? { maxHeight: "400px" } : { maxHeight: "0", padding: "0 20px", overflow: "hidden" };
     const rotate = { transform: isOpen ? "rotate(0deg)" : "rotate(180deg)" };
 
     let customStyling = null;
 
-    if (size === "large") {
+    if (size === "large" && window.innerWidth > 830) {
         customStyling = {
             maxWidth: "82.5%",
             fontStyle: "normal",
             fontWeight: "400",
-            fontSize: "24px", 
-            lineHeight: "34px"  };
+            fontSize: "24px",
+            lineHeight: "34px"
+        };
     }
     else if (size === "mobile") {
         customStyling = { maxWidth: "100%" };
@@ -42,7 +43,8 @@ const Dropdown = ({ text, list, size, position }) => {
                     <div key={index} className="dropdown__item">
                         <span>{item}</span>
                     </div>
-                )) : list}
+                )) : <div className="dropdown__item"> {list}
+                </div>}
             </div>
         </div>
     );

@@ -50,11 +50,11 @@
     z-index: 2;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 830px) {
 
     .card__container {
         width: 100%;
-        max-width: 550px;
+        max-width: 830px;
         height: 255px;
         margin: 0 0 20px 0px;
         box-sizing: content-box;
@@ -62,7 +62,7 @@
 
     .card{
         width: 100%;
-        max-width: 550px;
+        max-width: 830px;
         height: 255px;
         box-sizing: content-box;
     }

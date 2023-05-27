@@ -57,3 +57,26 @@
     line-height: 26px;
     color: white;
 }
+
+@media (max-width: 830px) {
+    .carousel {
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    .carousel__container__counter__span {
+        display: none;
+    }
+
+    .carousel__container__arrow__left{
+        left: 6px;
+    }
+    
+    .carousel__container__arrow__right{
+        right: 6px;
+    }
+
+    .carousel__container__image {
+        border-radius: 10px;
+    }
+}

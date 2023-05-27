@@ -32,3 +32,20 @@
     background-position: center;
     background-size: cover;
 }
+
+@media (max-width: 830px) {
+    .profile__container__image {
+        width: 32px;
+        height: 32px;
+    }
+
+    .profile__container__name {
+        max-height: 32px;
+        margin: 0 10px 0 0;
+    }
+
+    .profile__container__h1 {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

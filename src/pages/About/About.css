@@ -29,3 +29,12 @@
 .about__dropdown{
     margin: 15px 0;
 }
+
+@media (max-width: 830px) {
+    .about{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    
+}

@@ -7,7 +7,7 @@
     width: auto;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 830px) {
     .nav__list {
         padding: 0;
     }

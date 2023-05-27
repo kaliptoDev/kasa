@@ -1,4 +1,4 @@
-.star__active path{
+.star__active path {
     fill: #FF6060;
 }
 
@@ -6,6 +6,22 @@
     fill: #E3E3E3;
 }
 
-.star{
+.star {
     margin: 0 7px;
+}
+
+@media (max-width: 830px) {
+    .star {
+        margin: 0 3px;
+    }
+
+    .star__inactive{
+        width: 14px;
+        height: 14px;
+    }
+
+    .star__active {
+        width: 14px;
+        height: 14px;
+    }
 }
