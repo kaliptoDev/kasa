@@ -26,10 +26,11 @@ function FicheLogement() {
         return <ErrorPage />
     }
 
+
     return (
         <div className='ficheLogement'>
             <div className='ficheLogement__Carousel'>
-                {fiche && <Carousel images={fiche.pictures} /> }
+                {fiche && <Carousel images={fiche.pictures} />}
             </div>
 
             <div className='ficheLogement__container'>
