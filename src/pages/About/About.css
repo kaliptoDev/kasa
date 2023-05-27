@@ -36,5 +36,11 @@
         box-sizing: border-box;
     }
 
-    
+    .about__image {
+        border-radius: 10px;
+    }
+
+    .about__image__container {
+        border-radius: 10px;
+    }
 }
